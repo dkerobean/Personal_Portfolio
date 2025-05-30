@@ -1,0 +1,486 @@
+<!-- START HEADER DESIGN AREA -->
+<section id="home" class="bg-primaryColor pt-[115px]">
+  <div class="container">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12">
+        <!-- START HERO DESIGN AREA -->
+        <div class="wow fadeInUp delay-0-2s p-0 text-center">
+          <h2 class="bigHeading lg:text-[120px] md:text-[100px] sm:text-[60px] text-[50px] leading-[1] font-bold text-white">
+            <%= profile ? profile.name : 'Your Name' %>
+          </h2>
+        </div>
+        <!-- / END HERO DESIGN AREA -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / END HEADER DESIGN AREA -->
+
+<!-- START ABOUT DESIGN AREA -->
+<section id="about" class="pt-[120px]">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12 sm:col-span-4">
+        <div class="about-left">
+          <img src="<%= profile && profile.image_url ? profile.image_url : '/assets/images/about.jpg' %>" alt="" />
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-8">
+        <div class="about-right">
+          <div class="nino-section-title mb-[60px]">
+            <span class="text-[36px] leading-[1] font-medium text-primaryColor"
+              >About Me</span
+            >
+          </div>
+          <div class="about-text mb-[30px]">
+            <p class="font-normal text-lg text-greyBg mb-0 nino-dsc">
+              <%= profile ? profile.bio : 'Your bio will appear here. Edit it from the admin dashboard.' %>
+            </p>
+          </div>
+          <div class="about-contact-info mt-[30px]">
+            <div class="grid grid-cols-12 gap-6">
+              <div class="col-span-12 md:col-span-6">
+                <div class="about-contact-info-list mb-[15px]">
+                  <h5 class="text-base font-medium text-greyBg">Phone:</h5>
+                  <p class="text-base font-bold text-white mb-0">
+                    <%= profile && profile.phone ? profile.phone : 'Your phone number' %>
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="about-contact-info-list mb-[15px]">
+                  <h5 class="text-base font-medium text-greyBg">Email:</h5>
+                  <p class="text-base font-bold text-white mb-0">
+                    <%= profile && profile.email ? profile.email : 'your.email@example.com' %>
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="about-contact-info-list mb-[15px]">
+                  <h5 class="text-base font-medium text-greyBg">Address:</h5>
+                  <p class="text-base font-bold text-white mb-0">
+                    <%= profile && profile.address ? profile.address : 'Your address' %>
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="about-contact-info-list mb-[15px]">
+                  <h5 class="text-base font-medium text-greyBg">
+                    Freelance:
+                  </h5>
+                  <p class="text-base font-bold text-white mb-0">Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-btn-area mt-[40px]">
+            <div class="flex space-x-[30px]">
+              <a href="/contact" class="theme-btn"
+                >Contact Me <i class="ri-arrow-right-line"></i
+              ></a>
+              <a href="/about" class="theme-btn two"
+                >Read More <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / END ABOUT DESIGN AREA -->
+
+<!-- START SERVICE DESIGN AREA -->
+<section id="services" class="pt-[120px]">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12">
+        <div class="section-title mb-[60px]">
+          <span class="text-primaryColor text-[20px] leading-[1] font-medium mb-[10px] block"
+            >My Services</span
+          >
+          <h2 class="heading">
+            <span
+              >Transforming</span
+            >
+            Ideas
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-6">
+      <% if(services && services.length > 0) { %>
+        <% services.forEach(service => { %>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <div class="service-inner wow fadeInUp delay-0-2s">
+              <div class="service-icon mb-[35px]">
+                <i class="<%= service.icon %>"></i>
+              </div>
+              <div class="service-inner-content">
+                <h4 class="text-[24px] font-bold text-white mb-[20px]">
+                  <%= service.title %>
+                </h4>
+                <p class="font-normal text-base text-greyBg mb-[30px]">
+                  <%= service.description %>
+                </p>
+                <a href="/service" class="service-btn">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <div class="col-span-12">
+          <p class="text-center text-greyBg">No services found. Add them from the admin dashboard.</p>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<!-- / END SERVICE DESIGN AREA -->
+
+<!-- START WORK DESIGN AREA -->
+<section id="work" class="pt-[120px]">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12">
+        <div class="section-title mb-[60px]">
+          <span class="text-primaryColor text-[20px] leading-[1] font-medium mb-[10px] block"
+            >Portfolio</span
+          >
+          <h2 class="heading">
+            <span
+              >Featured</span
+            >
+            Projects
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-6">
+      <% if(projects && projects.length > 0) { %>
+        <% projects.forEach(project => { %>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="portfolio-inner relative mb-[30px]">
+              <div class="portfolio-thumb relative overflow-hidden">
+                <img
+                  src="<%= project.image_url || '/assets/images/portfolio/portfolio-1.jpg' %>"
+                  alt="<%= project.title %>"
+                />
+                <a
+                  href="<%= project.image_url || '/assets/images/portfolio/portfolio-1.jpg' %>"
+                  class="work-popup image-popup-link absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center"
+                  ><i
+                    class="ri-add-fill text-[30px] text-white bg-primaryColor h-[70px] w-[70px] flex items-center justify-center rounded-full"
+                  ></i
+                ></a>
+              </div>
+              <div class="portfolio-content absolute left-[30px] bottom-[30px]">
+                <span
+                  class="portfolio-subtitle text-xs font-medium text-white block mb-[5px]"
+                  ><%= project.category || 'Web Development' %></span
+                >
+                <h4 class="portfolio-title">
+                  <a
+                    href="/single-project/<%= project.id %>"
+                    class="text-[20px] font-bold text-white block transition-all duration-500 ease-in-out hover:text-primaryColor"
+                    ><%= project.title %></a
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <div class="col-span-12">
+          <p class="text-center text-greyBg">No projects found. Add them from the admin dashboard.</p>
+        </div>
+      <% } %>
+    </div>
+    <div class="grid grid-cols-12">
+      <div class="col-span-12">
+        <div class="view-all-btn mt-[30px] text-center">
+          <a href="/projects" class="theme-btn"
+            >View All Projects <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / END WORK DESIGN AREA -->
+
+<!-- START BLOG DESIGN AREA -->
+<section id="blog" class="pt-[120px] pb-[120px]">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12">
+        <div class="section-title mb-[60px]">
+          <span class="text-primaryColor text-[20px] leading-[1] font-medium mb-[10px] block"
+            >My Blog</span
+          >
+          <h2 class="heading">
+            <span
+              >Latest</span
+            >
+            Articles
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-6">
+      <% if(blogs && blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="blog-inner mb-[30px]">
+              <div class="blog-thumb relative overflow-hidden mb-[25px]">
+                <img
+                  src="<%= blog.image_url || '/assets/images/blog/blog-1.jpg' %>"
+                  alt="<%= blog.title %>"
+                />
+                <a
+                  href="/blog-details/<%= blog.id %>"
+                  class="blog-tag absolute left-[20px] top-[20px] uppercase leading-[1] font-normal text-xs text-white bg-primaryColor py-[4px] px-[10px] inline-block"
+                  ><%= blog.category || 'Web Development' %></a
+                >
+              </div>
+              <div class="blog-content">
+                <ul class="blog-meta">
+                  <li>
+                    <span
+                      class="text-primaryColor text-sm font-medium inline-block mr-[20px]"
+                      ><i class="ri-calendar-todo-fill mr-[7px]"></i><%= new Date(blog.created_at).toLocaleDateString() %></span
+                    >
+                  </li>
+                </ul>
+                <h4 class="blog-title">
+                  <a
+                    href="/blog-details/<%= blog.id %>"
+                    class="text-[24px] leading-[1.3] font-bold text-white block mb-[15px] transition-all duration-500 ease-in-out hover:text-primaryColor"
+                    ><%= blog.title %></a
+                  >
+                </h4>
+                <p class="font-normal text-base text-greyBg mb-[20px]">
+                  <%= blog.excerpt || (blog.content && blog.content.length > 100 ? blog.content.substring(0, 100) + '...' : blog.content || '') %>
+                </p>
+                <a href="/blog-details/<%= blog.id %>" class="blog-btn"
+                  >Read More <i class="ri-arrow-right-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <div class="col-span-12">
+          <p class="text-center text-greyBg">No blog posts found. Add them from the admin dashboard.</p>
+        </div>
+      <% } %>
+    </div>
+    <div class="grid grid-cols-12">
+      <div class="col-span-12">
+        <div class="view-all-btn mt-[30px] text-center">
+          <a href="/blog" class="theme-btn"
+            >View All Articles <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / END BLOG DESIGN AREA -->
+
+<!-- START CONTACT DESIGN AREA -->
+<section id="contact" class="pt-[120px] pb-[120px] bg-[#151515]">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12">
+        <div class="section-title mb-[60px]">
+          <span class="text-primaryColor text-[20px] leading-[1] font-medium mb-[10px] block"
+            >Contact Me</span
+          >
+          <h2 class="heading">
+            <span
+              >Get In</span
+            >
+            Touch
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12 lg:col-span-5">
+        <div class="grid grid-cols-12 gap-y-[30px]">
+          <div class="col-span-12 sm:col-span-6 lg:col-span-12">
+            <div class="contact-info-inner">
+              <div class="flex flex-row gap-[20px] items-center">
+                <div class="contact-info-icon">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <div class="contact-info-text">
+                  <span
+                    class="text-sm font-normal text-greyBg mb-[5px] block"
+                    >Office Address</span
+                  >
+                  <h5 class="text-lg font-bold text-white mb-0">
+                    <%= profile && profile.address ? profile.address : 'Your address' %>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-12">
+            <div class="contact-info-inner">
+              <div class="flex flex-row gap-[20px] items-center">
+                <div class="contact-info-icon">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <div class="contact-info-text">
+                  <span
+                    class="text-sm font-normal text-greyBg mb-[5px] block"
+                    >Email Address</span
+                  >
+                  <h5 class="text-lg font-bold text-white mb-0">
+                    <%= profile && profile.email ? profile.email : 'your.email@example.com' %>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-12">
+            <div class="contact-info-inner">
+              <div class="flex flex-row gap-[20px] items-center">
+                <div class="contact-info-icon">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <div class="contact-info-text">
+                  <span
+                    class="text-sm font-normal text-greyBg mb-[5px] block"
+                    >Phone Number</span
+                  >
+                  <h5 class="text-lg font-bold text-white mb-0">
+                    <%= profile && profile.phone ? profile.phone : 'Your phone number' %>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-12">
+            <div class="contact-info-inner">
+              <div class="flex flex-row gap-[20px] items-center">
+                <div class="contact-info-icon">
+                  <i class="ri-time-line"></i>
+                </div>
+                <div class="contact-info-text">
+                  <span
+                    class="text-sm font-normal text-greyBg mb-[5px] block"
+                    >Working Hours</span
+                  >
+                  <h5 class="text-lg font-bold text-white mb-0">
+                    Mon - Fri: 9am - 5pm
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12 lg:col-span-7">
+        <!-- START CONTACT FORM DESIGN AREA -->
+        <div class="contact-form-area">
+          <form id="contact-form" action="/contact" method="POST">
+            <div class="grid grid-cols-12 gap-6">
+              <div class="col-span-12 md:col-span-6">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    required=""
+                    data-error="Please Enter Your Name"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    required=""
+                    data-error="Please Enter Your Email"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control"
+                    placeholder="Enter Your Number"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    class="form-control"
+                    placeholder="Enter Your Subject"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-12">
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Write Your message"
+                    required=""
+                    data-error="Please Write your Message"
+                  ></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-12">
+                <div class="form-group mb-0">
+                  <button type="submit" class="theme-btn">
+                    Send Me Message <i class="ri-mail-line"></i>
+                  </button>
+                  <div id="msgSubmit" class="hidden"></div>
+                </div>
+              </div>
+              <div class="col-span-12 text-center md:col-span-12">
+                <p class="input-success">
+                  We have received your mail, We will get back to you soon!
+                </p>
+                <p class="input-error">
+                  Sorry, Message could not send! Please try again.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- / END CONTACT FORM DESIGN AREA -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / END CONTACT DESIGN AREA -->

@@ -1,0 +1,63 @@
+<div class="position-sticky pt-3">
+  <div class="text-center mb-4">
+    <h5 class="text-white">Portfolio Admin</h5>
+    <hr class="bg-light">
+  </div>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin' ? 'active bg-primary' : '' %>" href="/admin">
+        <i class="fas fa-tachometer-alt me-2"></i>
+        Dashboard
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin/profile' ? 'active bg-primary' : '' %>" href="/admin/profile">
+        <i class="fas fa-user-circle me-2"></i>
+        Profile
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin/projects' ? 'active bg-primary' : '' %>" href="/admin/projects">
+        <i class="fas fa-briefcase me-2"></i>
+        Projects
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin/services' ? 'active bg-primary' : '' %>" href="/admin/services">
+        <i class="fas fa-cogs me-2"></i>
+        Services
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin/blogs' ? 'active bg-primary' : '' %>" href="/admin/blogs">
+        <i class="fas fa-blog me-2"></i>
+        Blog Posts
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white <%= path === '/admin/settings' ? 'active bg-primary' : '' %>" href="/admin/settings">
+        <i class="fas fa-cog me-2"></i>
+        Settings
+      </a>
+    </li>
+    <li class="nav-item mt-4">
+      <a class="nav-link text-white <%= path === '/auth/change-password' ? 'active bg-primary' : '' %>" href="/auth/change-password">
+        <i class="fas fa-key me-2"></i>
+        Change Password
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/auth/logout">
+        <i class="fas fa-sign-out-alt me-2"></i>
+        Logout
+      </a>
+    </li>
+  </ul>
+
+  <hr class="bg-light">
+  <div class="px-3 mt-4">
+    <a href="/" target="_blank" class="btn btn-outline-light btn-sm w-100">
+      <i class="fas fa-eye me-2"></i>View Site
+    </a>
+  </div>
+</div>

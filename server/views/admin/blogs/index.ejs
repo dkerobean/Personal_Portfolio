@@ -1,0 +1,77 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">All Blog Posts</h6>
+    <a href="/admin/blogs/new" class="btn btn-primary btn-sm">
+      <i class="fas fa-plus-circle me-1"></i> Add New Blog Post
+    </a>
+  </div>
+  <div class="card-body">
+    <% if (blogs && blogs.length > 0) { %>
+      <div class="table-responsive">
+        <table class="table table-bordered datatable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Published Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% blogs.forEach(blog => { %>
+              <tr>
+                <td><%= blog.title %></td>
+                <td><%= blog.category || 'Uncategorized' %></td>
+                <td><%= new Date(blog.created_at).toLocaleDateString() %></td>
+                <td>
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="/admin/blogs/edit/<%= blog.id %>" class="btn btn-primary">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="/blog-details/<%= blog.id %>" target="_blank" class="btn btn-info text-white">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<%= blog.id %>">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+                  
+                  <!-- Delete Modal -->
+                  <div class="modal fade" id="deleteModal<%= blog.id %>" tabindex="-1" aria-labelledby="deleteModalLabel<%= blog.id %>" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="deleteModalLabel<%= blog.id %>">Confirm Delete</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to delete the blog post "<%= blog.title %>"? This action cannot be undone.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                          <form action="/admin/blogs/<%= blog.id %>?_method=DELETE" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    <% } else { %>
+      <div class="text-center py-5">
+        <i class="fas fa-blog fa-4x text-gray-300 mb-3"></i>
+        <p class="mb-0">No blog posts found.</p>
+        <p class="mt-3">
+          <a href="/admin/blogs/new" class="btn btn-primary">
+            <i class="fas fa-plus-circle me-1"></i> Add Your First Blog Post
+          </a>
+        </p>
+      </div>
+    <% } %>
+  </div>
+</div>

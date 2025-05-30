@@ -1,0 +1,54 @@
+<!-- START MENU DESIGN AREA-->
+<header class="main-header">
+  <div class="header-upper">
+    <div class="container">
+      <div class="header-inner">
+        <div class="grid grid-cols-12 items-center gap-6">
+          <div class="col-span-6 sm:col-span-3 xl:col-span-2">
+            <div class="logo-area">
+              <div class="logo">
+                <a href="/">
+                  <img src="/assets/images/logo.png" alt="<%= typeof settings !== 'undefined' ? settings.site_title : 'Portfolio' %>" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-6 sm:col-span-9 xl:col-span-10">
+            <div class="main-menu">
+              <nav id="mobile-menu">
+                <ul>
+                  <li><a href="/" class="linkstyle">Home</a></li>
+                  <li><a href="/about" class="linkstyle">About</a></li>
+                  <li><a href="/service" class="linkstyle">Services</a></li>
+                  <li><a href="/projects" class="linkstyle">Projects</a></li>
+                  <li><a href="/blog" class="linkstyle">Blog</a></li>
+                  <li><a href="/contact" class="linkstyle">Contact</a></li>
+                </ul>
+              </nav>
+              <a href="javascript:void(0)" class="info-toggle-btn sidebar-toggle-btn">
+                <i class="fal fa-bars"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- // END MENU DESIGN AREA-->
+
+<!-- START MOBILE MENU DESIGN AREA-->
+<div class="sidebar__area">
+  <div class="sidebar__wrapper">
+    <div class="sidebar__close">
+      <button class="sidebar__close-btn" id="sidebar__close-btn">
+        <i class="fal fa-times"></i>
+      </button>
+    </div>
+    <div class="sidebar__content">
+      <div class="mobile-menu fix"></div>
+    </div>
+  </div>
+</div>
+<div class="body-overlay"></div>
+<!-- // END MOBILE MENU DESIGN AREA-->
