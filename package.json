@@ -1,13 +1,14 @@
 {
-  "name": "amenyo",
+  "name": "nino",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
-  "description": "Personal Portfolio Website",
+  "description": "",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "chokidar": "^4.0.1",
@@ -35,8 +36,5 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
-  },
-  "dependencies": {
-    "fs-extra": "^11.2.0"
   }
 }
