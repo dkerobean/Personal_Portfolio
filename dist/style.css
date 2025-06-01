@@ -4709,8 +4709,8 @@ a.meanmenu-reveal{
 .text-\[30px\]{
   font-size: 30px;
 }
-.text-\[70px\]{
-  font-size: 70px;
+.text-\[40px\]{
+  font-size: 40px;
 }
 .text-\[90px\]{
   font-size: 90px;
@@ -5745,8 +5745,8 @@ body.loaded {
     padding-left: 100px;
     padding-right: 100px;
   }
-  .md\:text-\[120px\]{
-    font-size: 120px;
+  .md\:text-\[100px\]{
+    font-size: 100px;
   }
   .md\:text-\[140px\]{
     font-size: 140px;
@@ -5787,14 +5787,14 @@ body.loaded {
   .lg\:pl-10{
     padding-left: 2.5rem;
   }
+  .lg\:text-\[100px\]{
+    font-size: 100px;
+  }
   .lg\:text-\[130px\]{
     font-size: 130px;
   }
   .lg\:text-\[150px\]{
     font-size: 150px;
-  }
-  .lg\:text-\[170px\]{
-    font-size: 170px;
   }
 }
 @media (min-width: 1200px){
@@ -5823,6 +5823,6 @@ body.loaded {
     font-size: 180px;
   }
   .xl\:text-\[230px\]{
-    font-size: 205px;
+    font-size: 230px;
   }
 }
