@@ -21,6 +21,7 @@ function generateHtmlPlugins(rootDir) {
     plugins.push(
       new HtmlWebpackPlugin({
         filename: file,
+        path: path.resolve(__dirname, 'public'),
         template: path.join(rootDir, file),
         inject: "body", // Fix: Change `directory` to `rootDir`
       })
