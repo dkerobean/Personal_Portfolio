@@ -2,7 +2,7 @@
 * ----------------------------------------------------------------------------------------
 Author       : Tanvir Hossain
 Template Name: Nino - Premium Portfolio Template
-Version      : 1.0                                          
+Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
 
@@ -504,5 +504,31 @@ Version      : 1.0
         ease: "power2.out",
       });
     });
+  });
+
+  // ## Header Style Function
+  function headerStyle() {
+    if ($(".main-header").length) {
+      var windowpos = $(window).scrollTop();
+      var siteHeader = $(".main-header");
+      var scrollLink = $(".scroll-top");
+      if (windowpos >= 100) {
+        siteHeader.addClass("fixed-header");
+        scrollLink.fadeIn(300);
+      } else {
+        siteHeader.removeClass("fixed-header");
+        scrollLink.fadeOut(300);
+      }
+    }
+  }
+
+  // Call headerStyle on scroll and page load
+  $(window).on("scroll", function () {
+    headerStyle();
+  });
+
+  // Ensure header style is initialized on page load
+  $(document).ready(function() {
+    headerStyle();
   });
 })(jQuery); // End jQuery
