@@ -49,7 +49,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
+        index: resolve(__dirname, 'src/index.html'),
         about: resolve(__dirname, 'src/about.html'),
         blog: resolve(__dirname, 'src/blog.html'),
         contact: resolve(__dirname, 'src/contact.html'),
@@ -57,9 +57,19 @@ export default defineConfig({
         service: resolve(__dirname, 'src/service.html')
       },
       output: {
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: (chunkInfo) => {
+          return `assets/js/${chunkInfo.name.replace(/^\//, '')}-[hash].js`;
+        },
         chunkFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+        assetFileNames: ({name}) => {
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')){
+            return 'assets/images/[name]-[hash][extname]';
+          }
+          if (/\.(ttf|woff2?)$/.test(name ?? '')) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          return 'assets/[ext]/[name]-[hash][extname]';
+        }
       }
     }
   },
