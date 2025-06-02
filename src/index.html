@@ -1,177 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- META -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Nino - Modern Portfolio Template" />
-    <meta
-      name="keywords"
-      content="personal, portfolio new, html, one page, tailwind, new html template, design, creative, onepage, clean, modern"
-    />
-    <meta name="author" content="Tanvir Hossain" />
-    <!-- PAGE TITLE -->
+    {{> head }}
     <title>Nino - Modern Portfolio Template</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-
-    <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="./assets/css/font-awesome-pro.css" />
-    <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="./assets/fonts/remixicon.css" />
-    <!-- MAGNIFIC CSS -->
-    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
-    <!-- NICE SELECT CSS -->
-    <link rel="stylesheet" href="./assets/css/nice-select.min.css" />
-    <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="./assets/css/animate.min.css" />
-    <!-- MOBILE MENU CSS -->
-    <link rel="stylesheet" href="./assets/css/mobilemenu.css" />
-    <!-- SLICK CSS -->
-    <link rel="stylesheet" href="./assets/css/slick.min.css" />
-    <!-- SPACING CSS -->
-    <link rel="stylesheet" href="./assets/css/spacing.css" />
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
   <body class="overflow-x-hidden bg-bodyBackground font-normal text-greyBg">
     <!-- START PRELOADER AREA-->
-
-    <div
-      class="preloader fixed left-0 top-0 z-[99999999999999] flex h-[100vh] w-full items-center justify-center overflow-hidden bg-transparent"
-    >
-      <svg
-        class="absolute top-0 h-[110vh] w-[100vw] fill-bodyBackground"
-        viewbox="0 0 1000 1000"
-        preserveaspectratio="none"
-      >
-        <path
-          id="preloaderSvg"
-          d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"
-        ></path>
+    <div class="preloader fixed left-0 top-0 z-[99999999999999] flex h-[100vh] w-full items-center justify-center overflow-hidden bg-transparent">
+      <svg class="absolute top-0 h-[110vh] w-[100vw] fill-bodyBackground" viewbox="0 0 1000 1000" preserveaspectratio="none">
+        <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
       </svg>
       <div class="preloader-heading">
-        <div
-          class="load-text z-20 text-xl font-extralight uppercase tracking-[15px]"
-        >
-          <span>L</span>
-          <span>o</span>
-          <span>a</span>
-          <span>d</span>
-          <span>i</span>
-          <span>n</span>
-          <span>g</span>
+        <div class="load-text z-20 text-xl font-extralight uppercase tracking-[15px]">
+          <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
         </div>
       </div>
     </div>
-
     <!-- END PRELOADER AREA -->
-    <!-- START SCROOL UP DESIGN AREA -->
-    <div
-      class="progress-wrap fixed bottom-[30px] right-[30px] z-50 block size-11 cursor-pointer rounded-[50px]"
-    >
-      <i
-        class="ri-arrow-up-s-line absolute left-[10px] top-2 text-center text-[25px]"
-      ></i>
-      <svg
-        class="progress-circle svg-content"
-        width="100%"
-        height="100%"
-        viewBox="-1 -1 102 102"
-      >
-        <path
-          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          class="fill-none stroke-[#ddd] stroke-[4] duration-500"
-        />
-      </svg>
-    </div>
-    <!-- / END SCROOL UP DESIGN AREA -->
-    <!-- START MAGIC CURSOR AND BALL AREA-->
-    <div
-      id="magic-cursor"
-      class="pointer-events-none absolute left-0 top-0 z-[10000] h-[30px] w-[30px] delay-500 duration-200 ease-in-out"
-    >
-      <div
-        id="ball"
-        class="pointer-events-none fixed -my-5 flex h-10 w-10 flex-col justify-center rounded-full border-2 border-gray-600 opacity-0"
-      ></div>
-    </div>
-    <!-- / END MAGIC CURSOR AND BALL AREA-->
-    <!-- START MENU DESIGN AREA-->
-    <header class="main-header">
-      <div class="header-upper">
-        <div class="container">
-          <div class="header-inner">
-            <div class="grid grid-cols-12 items-center gap-6">
-              <div class="col-span-6 sm:col-span-3 xl:col-span-2">
-                <div class="logo-area">
-                  <div class="logo">
-                    <a href="index.html"
-                      ><img src="./assets/images/logo.png" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-6 sm:col-span-9 xl:col-span-10">
-                <div class="main-menu">
-                  <nav id="mobile-menu">
-                    <ul>
-                      <li><a href="index.html" class="linkstyle">Home</a></li>
-                      <li><a href="about.html" class="linkstyle">about</a></li>
-                      <li>
-                        <a href="service.html" class="linkstyle">services</a>
-                      </li>
-                      <li class="has-dropdown group">
-                        <a href="projects.html" class="linkstyle">projects</a>
-                        <ul class="sub-menu">
-                          <li><a href="projects.html">Projects List</a></li>
-                          <li>
-                            <a href="single-project.html">Single Portfolio</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="blog.html" class="linkstyle">Blog</a></li>
-                      <li>
-                        <a href="contact.html" class="linkstyle">Contact</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="side-menu-icon text-end lg:hidden">
-                  <a
-                    href="javascript:void(0)"
-                    class="info-toggle-btn sidebar-toggle-btn"
-                    ><i class="fal fa-bars"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- // END MENU DESIGN AREA-->
-    <!-- START MOBILE MENU DESIGN AREA-->
-    <div class="sidebar__area">
-      <div class="sidebar__wrapper">
-        <div class="sidebar__close">
-          <button class="sidebar__close-btn" id="sidebar__close-btn">
-            <i class="fal fa-times"></i>
-          </button>
-        </div>
-        <div class="sidebar__content mb-[20px] mt-[50px]">
-          <div class="mobile-menu fix"></div>
-        </div>
-      </div>
-    </div>
-    <div class="body-overlay"></div>
-    <!-- // END MOBILE MENU DESIGN AREA-->
+
+    {{> header }}
+
+    <!-- MAIN PAGE CONTENT START -->
     <!-- START HEADER DESIGN AREA -->
     <section id="home" class="bg-primaryColor pt-[115px]">
       <div class="container">
@@ -982,5 +831,7 @@
     <script src="./assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
     <script src="./assets/js/script.js"></script>
+    {{> scripts }}
+    <script type="module" src="/assets/js/index.js"></script>
   </body>
 </html>
