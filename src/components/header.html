@@ -1,11 +1,32 @@
 <!-- START SCROOL UP DESIGN AREA -->
-<div class="progress-wrap fixed bottom-[30px] right-[30px] z-50 block size-11 cursor-pointer rounded-[50px]">
-  <i class="ri-arrow-up-s-line absolute left-[10px] top-2 text-center text-[25px]"></i>
-  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" class="fill-none stroke-[#ddd] stroke-[4] duration-500" />
-  </svg>
-</div>
-<!-- / END SCROOL UP DESIGN AREA -->
+    <!-- START PRELOADER AREA-->
+    <div
+      class="preloader fixed left-0 top-0 z-[99999999999999] flex h-[100vh] w-full items-center justify-center overflow-hidden bg-transparent">
+      <svg class="absolute top-0 h-[110vh] w-[100vw] fill-bodyBackground" viewbox="0 0 1000 1000"
+        preserveaspectratio="none">
+        <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+      <div class="preloader-heading">
+        <div class="load-text z-20 text-xl font-extralight uppercase tracking-[15px]">
+          <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+        </div>
+      </div>
+    </div>
+    <!-- END PRELOADER AREA -->
+    <!-- START SCROOL UP DESIGN AREA -->
+    <div class="progress-wrap fixed bottom-[30px] right-[30px] z-50 block size-11 cursor-pointer rounded-[50px]">
+      <i class="ri-arrow-up-s-line absolute left-[10px] top-2 text-center text-[25px]"></i>
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" class="fill-none stroke-[#ddd] stroke-[4] duration-500" />
+      </svg>
+    </div>
+    <!-- / END SCROOL UP DESIGN AREA -->
+    <div id="magic-cursor"
+      class="pointer-events-none absolute left-0 top-0 z-[10000] h-[30px] w-[30px] delay-500 duration-200 ease-in-out">
+      <div id="ball"
+        class="pointer-events-none fixed -my-5 flex h-10 w-10 flex-col justify-center rounded-full border-2 border-gray-600 opacity-0">
+      </div>
+    </div>
 <header class="main-header">
   <div class="header-upper">
     <div class="container">

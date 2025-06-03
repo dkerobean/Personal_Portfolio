@@ -22,6 +22,9 @@ import './imagesloaded.pkgd.min.js';
 import './isotope.pkgd.min.js';
 import './wow.min.js';
 import './script.js';
+import './counter-init.js';
+import './enhanced-router.js';
+import './dynamic-loader.js';
 
 // Hide the loading screen after the page loads
 window.addEventListener("load", () => {
