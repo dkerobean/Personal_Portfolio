@@ -34,10 +34,16 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: Object.keys(pageData).reduce((acc, page) => {
-        acc[page.replace('.html', '')] = resolve(process.cwd(), 'src', page);
-        return acc;
-      }, {})
+      input: {
+        'index': resolve(process.cwd(), 'src', 'index.html'),
+        'about': resolve(process.cwd(), 'src', 'about.html'),
+        'blog': resolve(process.cwd(), 'src', 'blog.html'),
+        'contact': resolve(process.cwd(), 'src', 'contact.html'),
+        'projects': resolve(process.cwd(), 'src', 'projects.html'),
+        'service': resolve(process.cwd(), 'src', 'service.html'),
+        'blog-details': resolve(process.cwd(), 'src', 'blog-details.html'),
+        'single-project': resolve(process.cwd(), 'src', 'single-project.html')
+      }
     }
   },
   plugins: [
@@ -47,7 +53,9 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, 'src/components'),
       context(pagePath) {
-        return pageData[pagePath];
+        // Convert the pagePath to match the keys in pageData
+        const normalizedPath = '/' + pagePath.split('/').pop();
+        return pageData[normalizedPath] || {};
       },
     })
   ],
