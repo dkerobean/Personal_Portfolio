@@ -29,7 +29,7 @@ const pageData = {
 
 export default defineConfig({
   root: 'src',
-  base: './',
+  base: '/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
