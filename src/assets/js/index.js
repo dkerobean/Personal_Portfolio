@@ -27,6 +27,25 @@ import './script.js';
 window.addEventListener("load", () => {
   const preloader = document.querySelector(".preloader");
   if (preloader) {
-    preloader.style.display = "none";
+    // Use animation to hide
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }, 500);
   }
+});
+
+// Failsafe - ensure preloader always gets hidden
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const preloader = document.querySelector(".preloader");
+    if (preloader && getComputedStyle(preloader).display !== "none") {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }
+  }, 3000);
 });
