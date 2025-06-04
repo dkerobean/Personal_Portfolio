@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "sendmail.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  },
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },

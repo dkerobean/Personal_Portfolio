@@ -364,15 +364,19 @@ Version      : 1.0
       data["message"].length > 1 &&
       data["name"].length > 1 &&
       data["subject"].length > 1
-    ) {
-      $.ajax({
+    ) {      $.ajax({
         type: "POST",
-        url: "sendmail.php",
-        data: data,
+        url: "/api/contact",
+        contentType: "application/json",
+        data: JSON.stringify(data),
         success: function () {
           $("#contactForm .input-success").delay(500).fadeIn(1000);
           $("#contactForm .input-error").fadeOut(500);
         },
+        error: function () {
+          $("#contactForm .input-error").delay(500).fadeIn(1000);
+          $("#contactForm .input-success").fadeOut(500);
+        }
       });
     } else {
       $("#contactForm .input-error").delay(500).fadeIn(1000);
@@ -417,7 +421,7 @@ Version      : 1.0
         $(".preloader").fadeOut(1000);
         return;
       }
-      
+
       const tl = gsap.timeline();
       const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
       const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
@@ -428,7 +432,7 @@ Version      : 1.0
         opacity: 0,
         duration: 0.5
       });
-      
+
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
