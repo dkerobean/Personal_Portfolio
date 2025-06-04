@@ -257,20 +257,19 @@
           </div>
           <!-- START CONTACT FORM DESIGN AREA -->
           <div class="col-span-12 lg:col-span-8">
-            <div class="contact-form contact-form-area wow fadeInUp delay-0-4s">
-              <form
+            <div class="contact-form contact-form-area wow fadeInUp delay-0-4s">              <form
                 id="contactForm"
                 class="contact-form"
-                action="#"
+                action="/api/contact"
                 method="post"
               >
                 <div class="grid grid-cols-12 gap-6">
                   <div class="col-span-12 md:col-span-6">
                     <div class="form-group">
-                      <label for="name">Full Name</label>
-                      <input
+                      <label for="name">Full Name</label>                      <input
                         type="text"
                         id="name"
+                        name="name"
                         class="form-control"
                         value=""
                         placeholder="Steve Milner"
@@ -285,10 +284,10 @@
                   </div>
                   <div class="col-span-12 md:col-span-6">
                     <div class="form-group">
-                      <label for="email">Email Address</label>
-                      <input
+                      <label for="email">Email Address</label>                      <input
                         type="email"
                         id="email"
+                        name="email"
                         class="form-control"
                         value=""
                         placeholder="hello@websitename.com"
@@ -303,15 +302,15 @@
                   </div>
                   <div class="col-span-12">
                     <div class="form-group">
-                      <label for="name">Subject</label>
-                      <input
+                      <label for="name">Subject</label>                      <input
                         type="text"
                         id="subject"
+                        name="subject"
                         class="form-control"
                         value=""
                         placeholder="Your Subject"
                         required=""
-                        data-error="Please enter your Name"
+                        data-error="Please enter your Subject"
                       />
                       <label for="name" class="for-icon"
                         ><i class="far fa-user"></i
