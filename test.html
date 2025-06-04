@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Test - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007acc;
+            background: #f8f9fa;
+        }
+        .success { border-left-color: #28a745; background: #d4edda; }
+        .error { border-left-color: #dc3545; background: #f8d7da; }
+        .counter-test {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007acc;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 10px 20px 10px 0;
+            padding: 10px 15px;
+            background: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-links a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Portfolio Deployment Test</h1>
+
+    <div class="test-item">
+        <h3>✅ HTML Loading</h3>
+        <p>If you can see this page, HTML files are being served correctly.</p>
+    </div>
+
+    <div class="test-item" id="js-test">
+        <h3>⏳ JavaScript Loading</h3>
+        <p>Testing JavaScript functionality...</p>
+    </div>
+
+    <div class="test-item" id="counter-test">
+        <h3>🔢 Counter Test</h3>
+        <p>Counter: <span class="counter-test count-text" data-stop="100" data-speed="2000">0</span></p>
+    </div>
+
+    <div class="test-item" id="jquery-test">
+        <h3>⏳ jQuery Loading</h3>
+        <p>Testing jQuery availability...</p>
+    </div>
+
+    <div class="nav-links">
+        <h3>🔗 Navigation Test</h3>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <div class="test-item">
+        <h3>📱 Responsive Test</h3>
+        <p>Resize your browser window to test responsive design.</p>
+    </div>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        // JavaScript test
+        document.addEventListener('DOMContentLoaded', function() {
+            const jsTest = document.getElementById('js-test');
+            jsTest.className = 'test-item success';
+            jsTest.innerHTML = '<h3>✅ JavaScript Loading</h3><p>JavaScript is working correctly!</p>';
+
+            // jQuery test
+            setTimeout(function() {
+                const jqTest = document.getElementById('jquery-test');
+                if (typeof jQuery !== 'undefined') {
+                    jqTest.className = 'test-item success';
+                    jqTest.innerHTML = '<h3>✅ jQuery Loading</h3><p>jQuery v' + jQuery.fn.jquery + ' is loaded and working!</p>';
+
+                    // Counter test
+                    setTimeout(function() {
+                        const counterTest = document.getElementById('counter-test');
+                        const counter = jQuery('.count-text');
+
+                        jQuery({countNum: 0}).animate({
+                            countNum: 100
+                        }, {
+                            duration: 2000,
+                            easing: 'linear',
+                            step: function() {
+                                counter.text(Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                                counter.text(100);
+                                counterTest.className = 'test-item success';
+                                counterTest.innerHTML = counterTest.innerHTML.replace('🔢 Counter Test', '✅ Counter Test - Working!');
+                            }
+                        });
+                    }, 500);
+                } else {
+                    jqTest.className = 'test-item error';
+                    jqTest.innerHTML = '<h3>❌ jQuery Loading</h3><p>jQuery failed to load. Check network tab for errors.</p>';
+                }
+            }, 1000);
+        });
+
+        // CSS test
+        if (getComputedStyle(document.body).fontFamily.includes('Arial')) {
+            console.log('✅ CSS is loading correctly');
+        }
+    </script>
+</body>
+</html>
