@@ -27,25 +27,15 @@
 
         $.ajax({
             type: "POST",
-            url: "/api/contact",
-            contentType: "application/json",
-            data: JSON.stringify({
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            }),
-            success : function(response){
-                if (response.success){
+            url: "assets/php/form-process.php",
+            data: "name=" + name + "&email=" + email + "&phone_number=" + phone_number + "&subject=" + subject + "&message=" + message,
+            success : function(text){
+                if (text == "success"){
                     formSuccess();
                 } else {
                     formError();
-                    submitMSG(false, response.message);
+                    submitMSG(false,text);
                 }
-            },
-            error: function() {
-                formError();
-                submitMSG(false, "Network error. Please try again.");
             }
         });
     }
