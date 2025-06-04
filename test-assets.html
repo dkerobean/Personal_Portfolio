@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Test</title>
+    <!-- Test compiled CSS -->
+    <link rel="stylesheet" href="/dist/assets/index-BQDR39Kr.css" />
+    <link rel="stylesheet" href="/dist/assets/style-B9SkM9OA.css" />
+</head>
+<body>
+    <h1>Asset Loading Test</h1>
+
+    <h2>Compiled CSS Test</h2>
+    <div class="container">
+        <p class="text-lg text-blue-500">This text should be styled with Tailwind classes if CSS is loading properly.</p>
+    </div>
+
+    <h2>Image Test</h2>
+    <div>
+        <h3>Compiled Images:</h3>
+        <img src="/dist/assets/logo-zqC5pwoa.png" alt="Logo" style="max-width: 200px;">
+        <img src="/dist/assets/me-GRTAnPJf.jpg" alt="Profile" style="max-width: 200px;">
+        <img src="/dist/assets/work1-B-t92nOi.jpg" alt="Work 1" style="max-width: 200px;">
+    </div>
+
+    <div>
+        <h3>Original Assets:</h3>
+        <img src="/assets/images/projects/work2.jpg" alt="Work 2" style="max-width: 200px;">
+        <img src="/assets/images/testimonials/author1.jpg" alt="Author 1" style="max-width: 200px;">
+    </div>
+
+    <!-- Test compiled JS -->
+    <script src="/dist/assets/index-hfo73gPw.js"></script>
+
+    <script>
+        // Test if CSS and JS are loading
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, testing asset loading...');
+
+            // Test CSS loading by checking computed styles
+            const testEl = document.querySelector('.text-lg');
+            if (testEl) {
+                const styles = window.getComputedStyle(testEl);
+                console.log('Font size (should be large if Tailwind loaded):', styles.fontSize);
+                console.log('Color (should be blue if Tailwind loaded):', styles.color);
+            }
+
+            // Test image loading
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                img.onload = () => console.log(`Image ${index + 1} loaded successfully:`, img.src);
+                img.onerror = () => console.error(`Image ${index + 1} failed to load:`, img.src);
+            });
+        });
+    </script>
+</body>
+</html>

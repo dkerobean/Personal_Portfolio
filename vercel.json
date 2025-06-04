@@ -8,7 +8,8 @@
     { "source": "/service", "destination": "/service.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/single-project", "destination": "/single-project.html" },
-    { "source": "/test", "destination": "/test.html" }
+    { "source": "/test", "destination": "/test.html" },
+    { "source": "/test-assets", "destination": "/test-assets.html" }
   ],
   "headers": [
     {
