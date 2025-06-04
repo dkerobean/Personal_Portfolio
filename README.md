@@ -78,12 +78,15 @@ npm run dev
 1. **Colors**: Edit CSS variables in `assets/css/style.css`
 2. **Content**: Update HTML files in the root directory
 3. **Images**: Replace images in `assets/images/`
-4. **Contact Form**: Configure PHP settings in `sendmail.php`
+4. **Contact Form**: Configure email settings in `.env.local` for development or Vercel environment variables for production
 
 ## 📧 Contact Form Setup
 
 The contact form uses PHP. Make sure to:
-1. Update email settings in `sendmail.php`
+1. Configure email settings in Vercel environment variables:
+   - `EMAIL_USER`: Your Gmail address
+   - `EMAIL_PASS`: Your Gmail app password  
+   - `EMAIL_TO`: Where to receive contact form emails
 2. Configure SMTP if needed
 3. Test form functionality after deployment
 
