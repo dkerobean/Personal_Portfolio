@@ -11,5 +11,15 @@
 <script src="/dist/assets/swiper-bundle-legacy-BsPhrHVS.js"></script>
 <!-- Legacy support -->
 <script src="/dist/assets/polyfills-legacy-D1p_boF3.js"></script>
-<!-- Custom contact form handler -->
-<script src="/assets/js/contact-form-script.js"></script>
+<!-- Contact form script (if needed for contact pages) -->
+<script>
+// Contact form functionality
+if (document.getElementById('contactForm')) {
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your contact form handling logic here
+    console.log('Contact form submitted');
+  });
+}
+</script>

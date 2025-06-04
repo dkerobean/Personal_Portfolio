@@ -14,6 +14,41 @@
 <!-- SWIPER CSS -->
 <link rel="stylesheet" href="/dist/assets/swiper-bundle-B3cIEhGj.css" />
 
+<!-- Fallback CSS if compiled assets fail to load -->
+<script>
+  // Check if compiled CSS loaded properly, if not load original CSS
+  setTimeout(function() {
+    const testEl = document.createElement('div');
+    testEl.className = 'container mx-auto';
+    testEl.style.visibility = 'hidden';
+    testEl.style.position = 'absolute';
+    document.body.appendChild(testEl);
+    
+    const styles = window.getComputedStyle(testEl);
+    const hasMarginAuto = styles.marginLeft === 'auto' && styles.marginRight === 'auto';
+    
+    if (!hasMarginAuto) {
+      console.warn('Compiled CSS failed to load, loading fallback CSS...');
+      // Load fallback CSS
+      const fallbackCSS = [
+        '/assets/css/style.css',
+        '/assets/css/animate.min.css',
+        '/assets/css/font-awesome-pro.css',
+        '/assets/fonts/remixicon.css'
+      ];
+      
+      fallbackCSS.forEach(function(href) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    }
+    
+    document.body.removeChild(testEl);
+  }, 100);
+</script>
+
 <!-- Preloader fallback -->
 <style>
   .preloader.hide {
