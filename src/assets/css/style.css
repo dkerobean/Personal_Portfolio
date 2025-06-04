@@ -2,7 +2,7 @@
 * ----------------------------------------------------------------------------------------
 Author       : Tanvir Hossain
 Template Name: Nino - Premium Portfolio Template
-Version      : 1.0
+Version      : 1.0                                          
 * ----------------------------------------------------------------------------------------
 */
 
@@ -473,7 +473,7 @@ Version      : 1.0
 
   /* Header Area */
   .header-area {
-    @apply fixed left-0 top-0 z-[999] w-full transition-all duration-500 ease-in-out;
+    @apply relative left-0 top-0 z-[999] w-full transition-all duration-500 ease-in-out;
   }
 
   .fixed-header .header-upper {
@@ -482,6 +482,14 @@ Version      : 1.0
 
   .fixed-header .header-inner {
     @apply py-4 transition-all duration-500 ease-in-out;
+  }
+
+  .fixed-header .main-menu .navbar-collapse li a {
+    @apply max-md:text-white;
+  }
+
+  .fixed-header .main-menu .navbar-collapse li a:hover {
+    @apply max-md:text-white;
   }
 
   .header-inner {
@@ -3278,16 +3286,36 @@ body.loaded {
       @apply text-xl;
     }
 
-    .fixed-header .header-upper {
-      @apply border-b border-buttonBorder bg-primaryColor transition-all duration-500 ease-in-out;
+    .single-service-information-wrap {
+      @apply ml-0;
     }
 
-    .fixed-header .header-inner {
-      @apply py-4 transition-all duration-500 ease-in-out;
+    .resume-item .content h4 {
+      @apply text-xl leading-[1.3em];
     }
 
-    .header-inner {
-      @apply py-5 transition-all duration-500 ease-in-out md:py-[30px];
+    .hero-image img {
+      @apply mt-0;
+    }
+
+    .hero-content {
+      @apply px-[10px] text-center;
+    }
+
+    .clienti-reviews {
+      @apply mb-10 text-center;
+    }
+
+    .clienti-reviews .clienti-profile {
+      @apply justify-center;
+    }
+
+    .clienti-reviews .reviews p {
+      @apply mt-0;
+    }
+
+    .footer-top {
+      @apply pb-[50px] pt-[10px];
     }
   }
   .blog-details-wrap .content h4 {

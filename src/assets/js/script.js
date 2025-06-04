@@ -2,7 +2,7 @@
 * ----------------------------------------------------------------------------------------
 Author       : Tanvir Hossain
 Template Name: Nino - Premium Portfolio Template
-Version      : 1.0
+Version      : 1.0                                          
 * ----------------------------------------------------------------------------------------
 */
 
@@ -408,58 +408,35 @@ Version      : 1.0
 
   /* ==========================================================================
        When document is loaded, do
-       ========================================================================== */  // Handle preloader
+       ========================================================================== */
+
   $(window).on("load", function () {
-    const hidePreloader = () => {
-      const svg = document.getElementById("preloaderSvg");
-      if (!svg) {
-        // If SVG is not found, just hide the preloader
-        $(".preloader").fadeOut(1000);
-        return;
-      }
-      
-      const tl = gsap.timeline();
-      const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-      const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+    const svg = document.getElementById("preloaderSvg");
+    const tl = gsap.timeline();
+    const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+    const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-      tl.to(".preloader-heading .load-text, .preloader-heading .cont", {
-        delay: 0.5,
-        y: -100,
-        opacity: 0,
-        duration: 0.5
-      });
-      
-      tl.to(svg, {
-        duration: 0.5,
-        attr: { d: curve },
-        ease: "power2.easeIn",
-      }).to(svg, {
-        duration: 0.5,
-        attr: { d: flat },
-        ease: "power2.easeOut",
-      });
-
-      tl.to(".preloader", {
-        y: -1500,
-        duration: 0.8,
-        ease: "power4.out"
-      });
-
-      tl.set(".preloader", {
-        zIndex: -1,
-        display: "none"
-      });
-    };
-
-    // Add a fallback in case the animation doesn't complete
-    setTimeout(() => {
-      if ($(".preloader").is(":visible")) {
-        $(".preloader").fadeOut(500);
-      }
-    }, 4000);
-
-    // Start the hide animation
-    hidePreloader();
+    tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+      delay: 1.5,
+      y: -100,
+      opacity: 0,
+    });
+    tl.to(svg, {
+      duration: 0.5,
+      attr: { d: curve },
+      ease: "power2.easeIn",
+    }).to(svg, {
+      duration: 0.5,
+      attr: { d: flat },
+      ease: "power2.easeOut",
+    });
+    tl.to(".preloader", {
+      y: -1500,
+    });
+    tl.to(".preloader", {
+      zIndex: -1,
+      display: "none",
+    });
   });
 
   /*
@@ -504,31 +481,5 @@ Version      : 1.0
         ease: "power2.out",
       });
     });
-  });
-
-  // ## Header Style Function
-  function headerStyle() {
-    if ($(".main-header").length) {
-      var windowpos = $(window).scrollTop();
-      var siteHeader = $(".main-header");
-      var scrollLink = $(".scroll-top");
-      if (windowpos >= 100) {
-        siteHeader.addClass("fixed-header");
-        scrollLink.fadeIn(300);
-      } else {
-        siteHeader.removeClass("fixed-header");
-        scrollLink.fadeOut(300);
-      }
-    }
-  }
-
-  // Call headerStyle on scroll and page load
-  $(window).on("scroll", function () {
-    headerStyle();
-  });
-
-  // Ensure header style is initialized on page load
-  $(document).ready(function() {
-    headerStyle();
   });
 })(jQuery); // End jQuery
