@@ -2,7 +2,7 @@
 * ----------------------------------------------------------------------------------------
 Author       : Tanvir Hossain
 Template Name: Nino - Premium Portfolio Template
-Version      : 1.0                                          
+Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
 
@@ -1020,6 +1020,40 @@ Version      : 1.0
 
   .service-item:hover .details-btn {
     @apply bg-primaryColor text-blackColor;
+  }
+
+  /* Service Features List */
+  .service-features {
+    @apply mt-4 space-y-2;
+  }
+
+  .service-features li {
+    @apply text-sm text-bodyColor leading-relaxed;
+  }
+
+  /* Service Benefits Section */
+  .service-benefits-section {
+    @apply mt-12 rounded-[20px] border border-borderColor bg-lighterColor p-8;
+  }
+
+  .benefit-item {
+    @apply transition duration-[0.3s];
+  }
+
+  .benefit-item:hover {
+    @apply transform translate-y-[-5px];
+  }
+
+  .benefit-icon {
+    @apply flex items-center justify-center;
+  }
+
+  .benefit-item h4 {
+    @apply text-lg font-semibold text-mainColor;
+  }
+
+  .benefit-item p {
+    @apply text-bodyColor;
   }
 
   /*

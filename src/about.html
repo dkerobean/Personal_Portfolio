@@ -1,38 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- META -->
+  <head>    <!-- META -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Nino - Modern Portfolio Template" />
+    <meta name="description" content="Learn about Amenyo, Ghana's leading software developer specializing in mobile app development, web development, and AI solutions. Discover my background, experience, and passion for creating innovative digital solutions for businesses." />
     <meta
       name="keywords"
-      content="personal, portfolio new, html, one page, tailwind, new html template, design, creative, onepage, clean, modern"
+      content="Amenyo about, software developer Ghana, mobile app developer Ghana, web developer Accra, AI solutions Ghana, software engineer background, Ghana tech expert, full stack developer Ghana, React developer Ghana, Flutter developer Ghana"
     />
-    <meta name="author" content="Tanvir Hossain" />
-    <!-- PAGE TITLE -->
-    <title>Nino - Modern Portfolio Template</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <meta name="author" content="Amenyo" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="GH" />
+    <meta name="geo.placename" content="Accra, Ghana" />
+    <meta name="geo.position" content="5.6037;-0.1870" />
+    <meta name="ICBM" content="5.6037, -0.1870" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Amenyo - Leading Software Developer in Ghana" />
+    <meta property="og:description" content="Learn about Amenyo, Ghana's leading software developer specializing in mobile app development, web development, and AI solutions. Discover my background, experience, and passion for creating innovative digital solutions." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://amenyo.com/about.html" />
+    <meta property="og:image" content="https://amenyo.com/assets/images/amenyo-profile.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Amenyo - Software Developer Ghana" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Amenyo - Leading Software Developer in Ghana" />
+    <meta name="twitter:description" content="Learn about Amenyo, Ghana's leading software developer specializing in mobile app development, web development, and AI solutions." />
+    <meta name="twitter:image" content="https://amenyo.com/assets/images/amenyo-profile.jpg" />
+    <meta name="twitter:creator" content="@amenyo_dev" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://amenyo.com/about.html" />
+    <!-- PAGE TITLE -->    <title>Amenyo - Software Developer</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
 
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Amenyo",
+      "url": "https://amenyo.com",
+      "image": "https://amenyo.com/assets/images/amenyo-profile.jpg",
+      "sameAs": [
+        "https://linkedin.com/in/amenyo-dev",
+        "https://twitter.com/amenyo_dev",
+        "https://github.com/amenyo",
+        "https://instagram.com/amenyo.dev"
+      ],
+      "jobTitle": "Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Amenyo Tech Solutions"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Accra",
+        "addressCountry": "Ghana",
+        "addressRegion": "Greater Accra"
+      },
+      "description": "Leading software developer in Ghana specializing in mobile app development, web development, and AI solutions for businesses.",
+      "knowsAbout": [
+        "Mobile App Development",
+        "Web Development",
+        "Artificial Intelligence",
+        "Flutter Development",
+        "React Development",
+        "Node.js Development",
+        "Python Programming",
+        "Cloud Computing",
+        "Software Architecture"
+      ],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "University of Ghana, Legon"
+      }
+    }
+    </script>    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="./assets/css/font-awesome-pro.css" />
     <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
-    <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="assets/fonts/remixicon.css" />
+    <link rel="stylesheet" href="./assets/fonts/remixicon.css" />
     <!-- MAGNIFIC CSS -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
     <!-- NICE SELECT CSS -->
-    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="./assets/css/nice-select.min.css" />
     <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
     <!-- MOBILE MENU CSS -->
-    <link rel="stylesheet" href="assets/css/mobilemenu.css" />
+    <link rel="stylesheet" href="./assets/css/mobilemenu.css" />
     <!-- SLICK CSS -->
-    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="./assets/css/slick.min.css" />
     <!-- SPACING CSS -->
-    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="./assets/css/spacing.css" />
     <!-- MAIN STYLE CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,104 +134,104 @@
       </div>
     </div>
     <!-- END PRELOADER AREA -->
-    <!-- START SCROOL UP DESIGN AREA -->
-    <div
-      class="progress-wrap fixed bottom-[30px] right-[30px] z-50 block size-11 cursor-pointer rounded-[50px]"
-    >
-      <i
-        class="ri-arrow-up-s-line absolute left-[10px] top-2 text-center text-[25px]"
-      ></i>
-      <svg
-        class="progress-circle svg-content"
-        width="100%"
-        height="100%"
-        viewBox="-1 -1 102 102"
-      >
-        <path
-          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          class="fill-none stroke-[#ddd] stroke-[4] duration-500"
-        />
-      </svg>
-    </div>
-    <!-- / END SCROOL UP DESIGN AREA -->
-    <!-- START MAGIC CURSOR AND BALL AREA-->
-    <div
-      id="magic-cursor"
-      class="pointer-events-none absolute left-0 top-0 z-[10000] h-[30px] w-[30px] delay-500 duration-200 ease-in-out"
-    >
-      <div
-        id="ball"
-        class="pointer-events-none fixed -my-5 flex h-10 w-10 flex-col justify-center rounded-full border-2 border-gray-600 opacity-0"
-      ></div>
-    </div>
-    <!-- / END MAGIC CURSOR AND BALL AREA-->
-    <!-- START MENU DESIGN AREA-->
-    <header class="main-header">
-      <div class="header-upper">
-        <div class="container">
-          <div class="header-inner">
-            <div class="grid grid-cols-12 items-center gap-6">
-              <div class="col-span-6 sm:col-span-3 xl:col-span-2">
-                <div class="logo-area">
-                  <div class="logo">
-                    <a href="index.html"
-                      ><img src="./assets/images/logo.png" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-6 sm:col-span-9 xl:col-span-10">
-                <div class="main-menu">
-                  <nav id="mobile-menu">
-                    <ul>
-                      <li><a href="index.html" class="linkstyle">Home</a></li>
-                      <li><a href="about.html" class="linkstyle">about</a></li>
-                      <li>
-                        <a href="service.html" class="linkstyle">services</a>
-                      </li>
-                      <li class="has-dropdown group">
-                        <a href="projects.html" class="linkstyle">projects</a>
-                        <ul class="sub-menu">
-                          <li><a href="projects.html">Projects List</a></li>
-                          <li>
-                            <a href="single-project.html">Single Portfolio</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="blog.html" class="linkstyle">Blog</a></li>
-                      <li>
-                        <a href="contact.html" class="linkstyle">Contact</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="side-menu-icon text-end lg:hidden">
-                  <a
-                    href="javascript:void(0)"
-                    class="info-toggle-btn sidebar-toggle-btn"
-                    ><i class="fal fa-bars"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- // END MENU DESIGN AREA-->
-    <!-- START MOBILE MENU DESIGN AREA-->
-    <div class="sidebar__area">
-      <div class="sidebar__wrapper">
-        <div class="sidebar__close">
-          <button class="sidebar__close-btn" id="sidebar__close-btn">
-            <i class="fal fa-times"></i>
-          </button>
-        </div>
-        <div class="sidebar__content mb-[20px] mt-[50px]">
-          <div class="mobile-menu fix"></div>
-        </div>
-      </div>
-    </div>
+     <!-- START SCROOL UP DESIGN AREA -->
+     <div
+     class="progress-wrap fixed bottom-[30px] right-[30px] z-50 block size-11 cursor-pointer rounded-[50px]"
+   >
+     <i
+       class="ri-arrow-up-s-line absolute left-[10px] top-2 text-center text-[25px]"
+     ></i>
+     <svg
+       class="progress-circle svg-content"
+       width="100%"
+       height="100%"
+       viewBox="-1 -1 102 102"
+     >
+       <path
+         d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+         class="fill-none stroke-[#ddd] stroke-[4] duration-500"
+       />
+     </svg>
+   </div>
+   <!-- / END SCROOL UP DESIGN AREA -->
+   <!-- START MAGIC CURSOR AND BALL AREA-->
+   <div
+     id="magic-cursor"
+     class="pointer-events-none absolute left-0 top-0 z-[10000] h-[30px] w-[30px] delay-500 duration-200 ease-in-out"
+   >
+     <div
+       id="ball"
+       class="pointer-events-none fixed -my-5 flex h-10 w-10 flex-col justify-center rounded-full border-2 border-gray-600 opacity-0"
+     ></div>
+   </div>
+   <!-- / END MAGIC CURSOR AND BALL AREA-->
+   <!-- START MENU DESIGN AREA-->
+   <header class="main-header">
+     <div class="header-upper">
+       <div class="container">
+         <div class="header-inner">
+           <div class="grid grid-cols-12 items-center gap-6">
+             <div class="col-span-6 sm:col-span-3 xl:col-span-2">
+               <div class="logo-area">
+                 <div class="logo">
+                   <a href="index.html"
+                     ><img src="./assets/images/logo.png" alt="Amenyo Logo"
+                   /></a>
+                 </div>
+               </div>
+             </div>
+             <div class="col-span-6 sm:col-span-9 xl:col-span-10">
+               <div class="main-menu">
+                 <nav id="mobile-menu">
+                   <ul>
+                     <li><a href="index.html" class="linkstyle">Home</a></li>
+                     <li><a href="about.html" class="linkstyle">about</a></li>
+                     <li>
+                       <a href="service.html" class="linkstyle">services</a>
+                     </li>
+                     <li class="has-dropdown group">
+                       <a href="projects.html" class="linkstyle">projects</a>
+                       <ul class="sub-menu">
+                         <li><a href="projects.html">Projects List</a></li>
+                         <li>
+                           <a href="single-project.html">Single Portfolio</a>
+                         </li>
+                       </ul>
+                     </li>
+                     <li><a href="blog.html" class="linkstyle">Blog</a></li>
+                     <li>
+                       <a href="contact.html" class="linkstyle">Contact</a>
+                     </li>
+                   </ul>
+                 </nav>
+               </div>
+               <div class="side-menu-icon text-end lg:hidden">
+                 <a
+                   href="javascript:void(0)"
+                   class="info-toggle-btn sidebar-toggle-btn"
+                   ><i class="fal fa-bars"></i
+                 ></a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </header>
+   <!-- // END MENU DESIGN AREA-->
+   <!-- START MOBILE MENU DESIGN AREA-->
+   <div class="sidebar__area">
+     <div class="sidebar__wrapper">
+       <div class="sidebar__close">
+         <button class="sidebar__close-btn" id="sidebar__close-btn">
+           <i class="fal fa-times"></i>
+         </button>
+       </div>
+       <div class="sidebar__content mb-[20px] mt-[50px]">
+         <div class="mobile-menu fix"></div>
+       </div>
+     </div>
+   </div>
     <div class="body-overlay"></div>
     <!-- // END MOBILE MENU DESIGN AREA-->
     <!-- START SINGLE PAGE DESIGN AREA -->
@@ -183,48 +245,113 @@
       </div>
     </section>
     <!-- // END SINGLE PAGE DESIGN AREA -->
-    <!-- START RESUME EXPERIENCE DESIGN AREA -->
+    <!-- START ABOUT ME CONTENT SECTION -->
+    <section class="about-content-area py-16">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6 items-center">
+          <div class="col-span-12 lg:col-span-6">
+            <div class="about-content wow fadeInUp delay-0-2s">
+              <h2 class="text-3xl font-bold mb-6">Who I Am</h2>
+              <p class="text-lg mb-4">
+                I'm Amenyo, a passionate software developer based in Accra, Ghana, with a mission to bridge the digital divide across Africa through innovative technology solutions. With expertise in mobile app development, web development, and AI integration, I help businesses transform their operations and reach new heights.
+              </p>
+              <p class="text-lg mb-4">
+                My journey in software development began with a fascination for how technology can solve real-world problems. Over the years, I've specialized in creating mobile applications using Flutter and React Native, building responsive websites with modern frameworks, and implementing AI solutions that drive business intelligence.
+              </p>
+              <p class="text-lg mb-6">
+                What sets me apart is my deep understanding of the Ghanaian and African market, combined with international development standards. I don't just write code – I create digital experiences that resonate with local users while meeting global quality benchmarks.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="stat-item">
+                  <h3 class="text-2xl font-bold text-primary">50+</h3>
+                  <p class="text-gray-600">Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="text-2xl font-bold text-primary">5+</h3>
+                  <p class="text-gray-600">Years Experience</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="text-2xl font-bold text-primary">30+</h3>
+                  <p class="text-gray-600">Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="text-2xl font-bold text-primary">24/7</h3>
+                  <p class="text-gray-600">Support Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="about-image wow fadeInUp delay-0-4s">
+              <img src="assets/images/about/me.jpg" alt="Amenyo - Software Developer from Ghana working on mobile app development" class="rounded-lg shadow-lg w-full" />
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-6 mt-16">
+          <div class="col-span-12">
+            <div class="mission-vision wow fadeInUp delay-0-2s">
+              <h2 class="text-3xl font-bold mb-8 text-center">My Mission & Vision</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="mission-card bg-white p-6 rounded-lg shadow-lg">
+                  <h3 class="text-xl font-bold mb-4 text-primary">Mission</h3>
+                  <p class="text-gray-700">
+                    To empower Ghanaian and African businesses with cutting-edge software solutions that drive growth, improve efficiency, and create meaningful digital experiences for their customers.
+                  </p>
+                </div>
+                <div class="vision-card bg-white p-6 rounded-lg shadow-lg">
+                  <h3 class="text-xl font-bold mb-4 text-primary">Vision</h3>
+                  <p class="text-gray-700">
+                    To become Ghana's most trusted software development partner, known for delivering innovative mobile apps, websites, and AI solutions that set new standards in the African tech ecosystem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // END ABOUT ME CONTENT SECTION -->    <!-- START RESUME EXPERIENCE DESIGN AREA -->
     <div class="resume-area no-padding" id="resume">
       <div class="container">
+        <section class="single-page-hero-area">
+          <div class="container">
+            <div class="grid grid-cols-12 items-center gap-6">
+              <div class="col-span-12 col-sm-6 items-center">
+                <h2>Experience</h2>
+              </div>
+            </div>
+          </div>
+          </section>
         <div class="grid grid-cols-12 gap-6">
           <div class="col-span-12 md:col-span-6">
             <div class="resume-wrapper wow fadeInUp delay-0-2s">
               <!-- START SINGLE EXPERIENCE DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2020 - Present</span>
-                <h2>Web Developer & Business Partner (Full-Time)</h2>
-                <span>@ Envato Marketplace</span>
+                <span class="resume-date">2021 - Present</span>
+                <h2>Lead Software Developer & Founder</h2>
+                <span>@ Amenyo Tech Solutions</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Founded and lead a software development company specializing in mobile app development, web solutions, and AI integration for Ghanaian businesses. Successfully delivered 50+ projects including e-commerce platforms, mobile banking solutions, and business management systems.
                 </p>
               </div>
               <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
               <!-- START SINGLE EXPERIENCE DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2018 - 2020</span>
-                <h2>CEO & Founder</h2>
-                <span>@ Thememaster LTD</span>
+                <span class="resume-date">2019 - 2021</span>
+                <h2>Senior Mobile App Developer</h2>
+                <span>@ TechHub Ghana</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Developed cross-platform mobile applications using Flutter and React Native for various startups and established businesses. Led a team of 5 developers and implemented CI/CD pipelines that improved deployment efficiency by 60%.
                 </p>
               </div>
               <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
               <!-- START SINGLE EXPERIENCE DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2012 - 2028</span>
-                <h2>Senior Designer</h2>
-                <span>@ Google</span>
+                <span class="resume-date">2018 - 2019</span>
+                <h2>Full Stack Web Developer</h2>
+                <span>@ Digital Ghana Initiative</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Built responsive web applications using React, Node.js, and MongoDB for government digitization projects. Contributed to Ghana's digital transformation by developing citizen-facing portals that served over 100,000 users.
                 </p>
               </div>
               <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
@@ -232,42 +359,34 @@
           </div>
           <div class="col-span-12 md:col-span-6">
             <div class="resume-wrapper wow fadeInUp delay-0-4s">
+              <!-- <h2>Education & Certifications</h2> -->
               <!-- START SINGLE EDUCATION DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2020 - Present</span>
-                <h2>Bachelor Degree of Science</h2>
-                <span>@ University of London</span>
+                <span class="resume-date">2023 - Present</span>
+                <h2>AI & Machine Learning Certification</h2>
+                <span>@ Google Cloud Platform</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Advanced certification in AI and machine learning, specializing in implementing AI solutions for business applications. Focus on natural language processing, computer vision, and predictive analytics for African market solutions.
                 </p>
               </div>
               <!-- / END SINGLE EDUCATION DESIGN AREA -->
               <!-- START SINGLE EDUCATION DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2018 - 2020</span>
-                <h2>Master Degree of Design</h2>
-                <span>@ Envato Education</span>
+                <span class="resume-date">2016 - 2020</span>
+                <h2>Bachelor of Computer Science</h2>
+                <span>@ University of Ghana, Legon</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Graduated with First Class Honors, specializing in software engineering and mobile application development. Final year project focused on developing mobile banking solutions for rural communities in Ghana.
                 </p>
               </div>
               <!-- / END SINGLE EDUCATION DESIGN AREA -->
               <!-- START SINGLE EDUCATION DESIGN AREA -->
               <div class="resume-box">
-                <span class="resume-date">2015 - 2018</span>
-                <h2>Degree Of UI & UX</h2>
-                <span>@ University of world</span>
+                <span class="resume-date">2022 - 2023</span>
+                <h2>AWS Solutions Architect Certification</h2>
+                <span>@ Amazon Web Services</span>
                 <p>
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  Professional certification in cloud architecture and deployment. Expertise in designing scalable, secure, and cost-effective cloud solutions for businesses of all sizes using AWS services and best practices.
                 </p>
               </div>
               <!-- / END SINGLE EDUCATION DESIGN AREA -->
@@ -276,8 +395,7 @@
         </div>
       </div>
     </div>
-    <!-- / END RESUME EXPERIENCE DESIGN AREA -->
-    <!-- START SKILL DESIGN AREA -->
+    <!-- / END RESUME EXPERIENCE DESIGN AREA -->    <!-- START SKILL DESIGN AREA -->
     <section id="skills" class="skill-area">
       <div class="container">
         <div class="container-inner">
@@ -286,7 +404,8 @@
               <div
                 class="section-title section-black-title wow fadeInUp delay-0-2s mb-10"
               >
-                <h2>Professional Skills</h2>
+                <h2>Technical Skills & Expertise</h2>
+                <p class="text-lg text-gray-600 mt-4">The tools and technologies I use to bring your ideas to life</p>
               </div>
             </div>
           </div>
@@ -298,64 +417,64 @@
                     class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
                   >
                     <div class="skill-item wow fadeInUp delay-0-2s">
-                      <img src="assets/images/skills/skill1.png" alt="Skill" />
-                      <h5>Figma</h5>
+                      <img src="assets/images/skills/flutter.png" alt="Flutter - Cross-platform mobile app development" />
+                      <h5>Flutter</h5>
                     </div>
                   </div>
                   <div
                     class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
                   >
                     <div class="skill-item wow fadeInUp delay-0-3s">
-                      <img src="assets/images/skills/skill2.png" alt="Skill" />
-                      <h5>Tailwand</h5>
+                      <img src="assets/images/skills/react.png" alt="React - Modern web development framework" />
+                      <h5>React</h5>
                     </div>
                   </div>
                   <div
                     class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
                   >
                     <div class="skill-item wow fadeInUp delay-0-4s">
-                      <img src="assets/images/skills/skill3.png" alt="Skill" />
-                      <h5>Photoshop</h5>
+                      <img src="assets/images/skills/nodejs.png" alt="Node.js - Backend development" />
+                      <h5>Node.js</h5>
                     </div>
                   </div>
                   <div
                     class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
                   >
                     <div class="skill-item wow fadeInUp delay-0-5s">
-                      <img src="assets/images/skills/skill4.png" alt="Skill" />
-                      <h5>WordPress</h5>
-                    </div>
-                  </div>
-                  <div
-                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
-                  >
-                    <div class="skill-item wow fadeInUp delay-0-2s">
-                      <img src="assets/images/skills/skill5.png" alt="Skill" />
-                      <h5>Angular</h5>
-                    </div>
-                  </div>
-                  <div
-                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
-                  >
-                    <div class="skill-item wow fadeInUp delay-0-3s">
-                      <img src="assets/images/skills/skill6.png" alt="Skill" />
-                      <h5>Webflow</h5>
-                    </div>
-                  </div>
-                  <div
-                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
-                  >
-                    <div class="skill-item wow fadeInUp delay-0-4s">
-                      <img src="assets/images/skills/skill7.png" alt="Skill" />
+                      <img src="assets/images/skills/python.png" alt="Python - AI and machine learning development" />
                       <h5>Python</h5>
                     </div>
                   </div>
                   <div
                     class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
                   >
+                    <div class="skill-item wow fadeInUp delay-0-2s">
+                      <img src="assets/images/skills/firebase.png" alt="Firebase - Backend as a Service platform" />
+                      <h5>Firebase</h5>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
+                  >
+                    <div class="skill-item wow fadeInUp delay-0-3s">
+                      <img src="assets/images/skills/aws.png" alt="AWS - Cloud computing services" />
+                      <h5>AWS</h5>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
+                  >
+                    <div class="skill-item wow fadeInUp delay-0-4s">
+                      <img src="assets/images/skills/mongodb.png" alt="MongoDB - NoSQL database" />
+                      <h5>MongoDB</h5>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-3"
+                  >
                     <div class="skill-item wow fadeInUp delay-0-5s">
-                      <img src="assets/images/skills/skill8.png" alt="Skill" />
-                      <h5>Sketch</h5>
+                      <img src="assets/images/skills/figma.png" alt="Figma - UI/UX design tool" />
+                      <h5>Figma</h5>
                     </div>
                   </div>
                 </div>
@@ -365,8 +484,7 @@
         </div>
       </div>
     </section>
-    <!-- / END SKILL DESIGN AREA -->
-    <!-- START FOOTER DESIGN AREA -->
+    <!-- / END CTA SECTION -->    <!-- START FOOTER DESIGN AREA -->
     <footer class="main-footer">
       <div class="container">
         <div class="grid grid-cols-12 gap-6">
@@ -376,7 +494,7 @@
               <h2
                 class="text-[120px] max-[490px]:text-[100px] max-[350px]:text-[80px] md:text-[140px] lg:text-[130px] xl:text-[180px]"
               >
-                <a href="mailto:hello@websitename.com">let's work</a>
+                <a href="mailto:hello@amenyo.com">let's work</a>
               </h2>
             </div>
           </div>
@@ -384,43 +502,41 @@
         <div class="grid grid-cols-12 gap-6">
           <div class="col-span-12 sm:col-span-6">
             <p class="copy-left-text">
-              Template by
-              <a href="https://themeforest.net/user/creativepersonal/portfolio"
-                >Creative Personal®</a
+              <a href="/"
+                >Amenyo®</a
               >
             </p>
           </div>
           <div class="col-span-12 sm:col-span-6">
-            <p class="copy-right-text">&copy; Copyright 2024</p>
+            <p class="copy-right-text">&copy; Copyright 2025</p>
           </div>
         </div>
       </div>
     </footer>
-    <!-- / END FOOTER DESIGN AREA -->
-    <!-- JQUERY JS -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- / END FOOTER DESIGN AREA -->    <!-- JQUERY JS -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
     <!-- APPEAR JS -->
-    <script src="assets/js/appear.min.js"></script>
+    <script src="./assets/js/appear.min.js"></script>
     <!-- MAGNIFICANT JS -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <!-- MOBILE MENU JS-->
-    <script src="assets/js/mobilemenu.js"></script>
+    <script src="./assets/js/mobilemenu.js"></script>
     <!-- GSAP AND LOCOMOTIV JS-->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/lenis.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/lenis.js"></script>
     <!-- SWIPPER JS-->
-    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="./assets/js/swiper-bundle.js"></script>
     <!-- NICE SELECT JS-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
     <!-- IMAGE LOADER JS-->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
     <!-- ISOTOPE JS-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="./assets/js/isotope.pkgd.min.js"></script>
     <!--  WOW ANIMATION JS-->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
-    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
