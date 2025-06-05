@@ -1,0 +1,58 @@
+Google Search Console Review Request
+=====================================
+
+Subject: Request for Security Review - Deceptive Pages Issue Resolution
+
+Dear Google Search Console Team,
+
+I am writing to request a security review for my website amenyo.com after addressing the "deceptive pages" security issue that was flagged.
+
+ISSUE IDENTIFIED AND RESOLVED:
+The security warning was triggered by the use of "javascript:void(0)" links in mobile menu toggle buttons across multiple pages. While this is a common development practice, I understand it can be flagged by security algorithms as potentially suspicious.
+
+ACTIONS TAKEN:
+1. Replaced all "javascript:void(0)" anchor links with proper HTML button elements
+2. Updated all mobile menu toggle buttons across 8 HTML files:
+   - index.html
+   - about.html
+   - contact.html
+   - service.html
+   - projects.html
+   - blog.html
+   - blog-details.html
+   - single-project.html
+
+3. Enhanced security by:
+   - Using semantic HTML button elements with proper type="button" attributes
+   - Adding appropriate ARIA labels for accessibility
+   - Maintaining all existing functionality through CSS classes
+
+WEBSITE DETAILS:
+- Website: amenyo.com
+- Business: Professional software development portfolio
+- Content: Legitimate portfolio showcasing mobile app development, web development, AI solutions, and digital marketing services in Ghana
+- No malicious content, downloads, or deceptive practices
+
+TECHNICAL IMPROVEMENTS:
+- Removed all javascript: protocol links
+- Implemented proper button elements for interactive elements
+- Maintained responsive design and functionality
+- Enhanced accessibility with ARIA labels
+
+The website contains only legitimate business content showcasing professional software development services. All interactive elements now use modern, secure coding practices that align with web security standards.
+
+I have verified that all changes are working correctly and the website functions as intended. I kindly request a re-evaluation of the security status for amenyo.com.
+
+Thank you for your time and consideration.
+
+Best regards,
+Dickson Amenyo
+Website Owner - amenyo.com
+Contact: info@amenyo.com
+
+---
+
+SHORTENED VERSION FOR FORM SUBMISSION:
+=======================================
+
+I have resolved the "deceptive pages" security issue on amenyo.com by replacing all "javascript:void(0)" links with proper HTML button elements across all pages. The website contains only legitimate business content showcasing professional software development services in Ghana. All interactive elements now use modern, secure coding practices. Please re-evaluate the security status. Thank you.
