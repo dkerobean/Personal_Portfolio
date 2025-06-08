@@ -3,6 +3,8 @@
   "github": {
     "silent": true
   },
+  "outputDirectory": "dist",
+  "buildCommand": "npm run build:prod",
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -26,35 +28,35 @@
   "rewrites": [
     {
       "source": "/about",
-      "destination": "/src/about.html"
+      "destination": "/about.html"
     },
     {
       "source": "/contact",
-      "destination": "/src/contact.html"
+      "destination": "/contact.html"
     },
     {
       "source": "/service",
-      "destination": "/src/service.html"
+      "destination": "/service.html"
     },
     {
       "source": "/projects",
-      "destination": "/src/projects.html"
+      "destination": "/projects.html"
     },
     {
       "source": "/blog",
-      "destination": "/src/blog.html"
+      "destination": "/blog.html"
     },
     {
       "source": "/blog-details",
-      "destination": "/src/blog-details.html"
+      "destination": "/blog-details.html"
     },
     {
       "source": "/single-project",
-      "destination": "/src/single-project.html"
+      "destination": "/single-project.html"
     },
     {
       "source": "/",
-      "destination": "/src/index.html"
+      "destination": "/index.html"
     }
   ]
 }
