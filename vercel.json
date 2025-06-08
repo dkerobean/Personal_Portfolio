@@ -5,6 +5,50 @@
   },
   "outputDirectory": "dist",
   "buildCommand": "npm run build:prod",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/service.html",
+      "destination": "/service",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-details.html",
+      "destination": "/blog-details",
+      "permanent": true
+    },
+    {
+      "source": "/single-project.html",
+      "destination": "/single-project",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
