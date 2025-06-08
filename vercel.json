@@ -1,9 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": null,
+  "public": true,
+  "github": {
+    "silent": true
+  },
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -26,8 +25,36 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/about",
+      "destination": "/src/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/src/contact.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/src/service.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/src/projects.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/src/blog.html"
+    },
+    {
+      "source": "/blog-details",
+      "destination": "/src/blog-details.html"
+    },
+    {
+      "source": "/single-project",
+      "destination": "/src/single-project.html"
+    },
+    {
+      "source": "/",
+      "destination": "/src/index.html"
     }
   ]
 }
